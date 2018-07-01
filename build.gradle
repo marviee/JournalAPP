@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath 'com.google.gms:google-services:4.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    String osName = System.getProperty("os.name").toLowerCase();
+    if (osName.contains("windows")) {
+        buildDir = "C:/tmp/${rootProject.name}/${project.name}"
+    }
+    repositories {
+        maven {
+            /*url 'https://maven.google.com/'*/
+            url 'https://dl.google.com/dl/android/maven2/'
+            name 'Google'
+        }
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

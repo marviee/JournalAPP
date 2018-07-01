@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_cloud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_cloud"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="8dp"
+            app:titleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:background="?attr/colorPrimary" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:background="#EFEFEF"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="4dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/online_data_rc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:clipToPadding="false">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
